@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="iwe.diskurslernen.membership">
+
+    <include package="plone.app.contentmenu" />
+
+    <browser:page
+      name="register"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      class=".register.RegistrationForm"
+      permission="zope.Public"
+      layer=".interfaces.ILayer"
+      />
+
+    <view
+      type="zope.publisher.interfaces.browser.IBrowserRequest"
+      for=".field.ICaptchaField"
+      provides="zope.app.form.interfaces.IInputWidget"
+      factory=".widget.CaptchaWidget"
+      permission="zope.Public"
+      />
+
+</configure>

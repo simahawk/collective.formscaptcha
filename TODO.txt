@@ -1,0 +1,7 @@
+TODO
+====
+
+- make it work with collective.captcha too
+- add more forms (login, contacts)
+- make it configurable via p.a.registry
+- make it work with z3c.form

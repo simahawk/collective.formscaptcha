@@ -1,6 +1,7 @@
 TODO
 ====
 
+- make it work with overlays
 - make it work with collective.captcha too
 - add more forms (login, contacts)
 - make it configurable via p.a.registry

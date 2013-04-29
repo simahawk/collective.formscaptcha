@@ -10,3 +10,9 @@ Adds captcha to Plone forms:
 
 
 Uses `collective.recaptcha`.
+
+Known issues
+============
+
+The captcha is not loaded into overlay.
+

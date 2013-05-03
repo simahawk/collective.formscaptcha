@@ -1,14 +1,9 @@
 from zope.app.form.browser import ASCIIWidget
-from zope.component.hooks import getSite
+
+from .utils import get_image_tag
 
 
 class CaptchaWidget(ASCIIWidget):
 
-    @property
-    def captcha_view(self):
-        site = getSite()
-        return site.restrictedTraverse('@@captcha')
-
     def __call__(self):
-        html = self.captcha_view.image_tag()
-        return html
+        return get_image_tag()

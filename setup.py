@@ -43,7 +43,6 @@ setup(name='collective.formscaptcha',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'collective.recaptcha',
       ],
       extras_require={'test': ['plone.app.testing']},
       entry_points="""

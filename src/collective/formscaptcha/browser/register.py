@@ -17,6 +17,8 @@ from .field import CaptchaField
 from .widget import CaptchaWidget
 from .. import _
 
+from .utils import verify
+
 
 class ICaptchaSchema(Interface):
     captcha = CaptchaField(
@@ -62,7 +64,7 @@ class RegistrationForm(BaseRegistrationForm):
         errors = super(RegistrationForm, self).validate_registration(action,
                                                                      data)
 
-        if not self.context.restrictedTraverse('@@captcha').verify():
+        if not verify(self.context, self.request):
             error = WidgetInputError('captcha',
                                      u'label_captcha',
                                      u'Wrong captcha')
